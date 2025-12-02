@@ -490,6 +490,10 @@ ul {
   font-size: 1rem;
 }
 
+.actions svg:last-child {
+  transform: scale(0.8);     
+  transform-origin: center;  
+}
 /* Action buttons  */
 
 .btn:disabled,
