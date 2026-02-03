@@ -4,7 +4,7 @@ import Footer from "./components/Footer"
 import Search from "./components/Search"
 import UserList from "./components/UserList"
 import Pagination from "./components/Pagination"
-import CreateUser from "./components/CreateUser"
+import CreateUserModal from "./components/CreateUserModal"
 
 function App() {
     const [showCreateUser, setShowCreateUser] = useState(false);
@@ -12,6 +12,10 @@ function App() {
     const addUserClickHandler = () => {
       setShowCreateUser(true);
    } 
+
+   const closeUserModalHandler = () => {
+      setShowCreateUser(false);
+   };
 
   return (
     <div>
@@ -30,7 +34,7 @@ function App() {
 
             </section>
 
-            {showCreateUser && <CreateUser />}
+            {showCreateUser && <CreateUserModal onClose={closeUserModalHandler} />}
 
           {/* User Details Modal */}
           {/* Create/Edit Form Modal */}

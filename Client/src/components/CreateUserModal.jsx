@@ -1,4 +1,4 @@
-export default function CreateUser({ onClose }) {
+export default function CreateUserModal({ onClose }) {
   return (
     <div className="overlay">
       <div className="backdrop" onClick={onClose}></div>
@@ -6,7 +6,7 @@ export default function CreateUser({ onClose }) {
       <div className="modal">
         <div className="user-container">
           <header className="headers">
-            <h2>Edit User/Add User</h2>
+            <h2>Add User</h2>
 
             <button className="btn close" type="button" onClick={onClose}>
               <svg
@@ -53,7 +53,6 @@ export default function CreateUser({ onClose }) {
               </div>
             </div>
 
-            {/* Row 2 */}
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="email">Email</label>
@@ -78,7 +77,6 @@ export default function CreateUser({ onClose }) {
               </div>
             </div>
 
-            {/* Long line: Image */}
             <div className="long-line">
               <label htmlFor="imageUrl">Image Url</label>
               <div className="input-wrapper">
@@ -90,7 +88,6 @@ export default function CreateUser({ onClose }) {
               <p className="form-error"></p>
             </div>
 
-            {/* Row 3 */}
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="country">Country</label>
@@ -115,7 +112,6 @@ export default function CreateUser({ onClose }) {
               </div>
             </div>
 
-            {/* Row 4 */}
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="street">Street</label>
