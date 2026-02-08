@@ -25,7 +25,20 @@ function App() {
       const userData = Object.fromEntries(formData);
 
       console.log(userData);
+        
+      fetch("http://localhost:3030/jsonstore/users", {
+          method: "POST",
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify(userData)
+      })
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+      })
       
+
    }
 
   return (
