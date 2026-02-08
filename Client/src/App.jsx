@@ -17,6 +17,17 @@ function App() {
       setShowCreateUser(false);
    };
 
+   const addUserHandler = (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+
+      const userData = Object.fromEntries(formData);
+
+      console.log(userData);
+      
+   }
+
   return (
     <div>
       <Header />
@@ -34,7 +45,12 @@ function App() {
 
             </section>
 
-            {showCreateUser && <CreateUserModal onClose={closeUserModalHandler} />}
+            {showCreateUser && 
+            <CreateUserModal 
+              onClose={closeUserModalHandler} 
+              onSubmit={addUserHandler}
+             />
+             }
 
           {/* User Details Modal */}
           {/* Create/Edit Form Modal */}
